@@ -1,1 +1,15 @@
 // Entry point for your Sass build
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+#sidebar {
+  background-color: #244564;
+  width: 220px;
+}
