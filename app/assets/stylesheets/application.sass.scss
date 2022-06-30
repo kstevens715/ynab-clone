@@ -1,25 +1,37 @@
 // Entry point for your Sass build
 
-html, body {
+html, body, #container {
   height: 100%;
 }
 
 body {
+  margin: 0;
+}
+
+#container {
   margin: 0;
   display: flex;
 }
 
 #sidebar {
   background-color: #244564;
-  width: 220px;
+  display: flex;
+  width: 250px;
 }
 
-#sidebar-border {
-  background-color: #244564;
+#sidebar-content {
+  flex: 1;
+}
+
+#sidebar-resizer {
   opacity: 0;
   width: 5px;
 }
 
-#sidebar-border:hover {
+#sidebar-resizer:hover {
   cursor: col-resize;
+}
+
+#content {
+  flex: 1;
 }

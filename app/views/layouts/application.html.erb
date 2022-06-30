@@ -12,8 +12,10 @@
 
   <body>
     <div id="container">
-      <div id="sidebar"></div>
-      <div id="sidebar-border" data-controller="hello"></div>
+      <nav id="sidebar" data-controller="hello">
+        <div id="sidebar-content"></div>
+        <div id="sidebar-resizer"></div>
+      </nav>
       <div id="content">
         <%= yield %>
       </div>
