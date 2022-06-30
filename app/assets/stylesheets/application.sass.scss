@@ -13,3 +13,13 @@ body {
   background-color: #244564;
   width: 220px;
 }
+
+#sidebar-border {
+  background-color: #244564;
+  opacity: 0;
+  width: 5px;
+}
+
+#sidebar-border:hover {
+  cursor: col-resize;
+}

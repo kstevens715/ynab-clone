@@ -10,11 +10,29 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body ondrop="drop_handler(event)" ondragover="drop_handler(event)">
     <div id="sidebar">
+    </div>
+    <div id="sidebar-border" draggable="true" ondragstart="dragstart_handler(event)">
     </div>
     <div id="content">
       <%= yield %>
     </div>
   </body>
+  <script>
+function dragstart_handler(ev) {
+      // TODO: Attach events to DOM with addEventListener and then add a flashcard
+      //       about ways to add event listener and which method is prefered.
+      //       https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers
+      //       https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#other_event_listener_mechanisms
+      //
+      // TODO: Maybe use Stimilus instead
+      ev.dataTransfer.effectAllowed = "move";
+}
+function drop_handler(ev) {
+      ev.preventDefault();
+      ev.dataTransfer.dropEffect = "move"
+      document.getElementById('sidebar').style.width = ev.clientX + "px";
+}
+</script>
 </html>
