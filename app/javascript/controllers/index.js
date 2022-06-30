@@ -4,5 +4,5 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import SidebarResizerController from "./sidebar_resizer_controller"
+application.register("sidebar-resizer", SidebarResizerController)
