@@ -12,31 +12,11 @@
 
   <body>
     <div id="container">
-      <div id="sidebar">
-      </div>
-      <div id="sidebar-border" draggable="true">
-      </div>
+      <div id="sidebar"></div>
+      <div id="sidebar-border" data-controller="hello"></div>
       <div id="content">
         <%= yield %>
       </div>
     </div>
   </body>
-  <script>
-    const container = document.getElementById('container');
-    container.addEventListener('drop', drop_handler);
-    container.addEventListener('dragover', drop_handler);
-
-    const sidebarBorder = document.getElementById('sidebar-border');
-    container.addEventListener('dragstart', dragstart_handler);
-
-    function dragstart_handler(ev) {
-      // TODO: Maybe use Stimilus instead
-      ev.dataTransfer.effectAllowed = 'move';
-    }
-    function drop_handler(ev) {
-      ev.preventDefault();
-      ev.dataTransfer.dropEffect = 'move'
-      document.getElementById('sidebar').style.width = ev.clientX + 'px';
-    }
-  </script>
 </html>
