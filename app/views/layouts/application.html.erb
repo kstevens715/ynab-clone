@@ -8,12 +8,22 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://kit.fontawesome.com/7726b00e0d.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div id="container">
       <nav id="sidebar" data-controller="sidebar-resizer">
-        <div id="sidebar-content"></div>
+        <div id="sidebar-content">
+          <div class="sidebar-actual-content">
+          </div>
+          <div class="sidebar-footer">
+            <div class="sidebar-expand-collapse-button">
+              <%# Use #d3d9e0 when not hovered over for icon %>
+              <i class="fa-solid fa-square-caret-left fa-2xl"></i>
+            </div>
+          </div>
+        </div>
         <div id="sidebar-resizer"></div>
       </nav>
       <div id="content">

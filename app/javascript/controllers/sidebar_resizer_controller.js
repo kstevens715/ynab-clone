@@ -20,7 +20,7 @@ export default class extends Controller {
     event.preventDefault();
     event.dataTransfer.dropEffect = 'none';
 
-    if (sidebarWidth > 50 && sidebarWidth < 700) {
+    if (sidebarWidth > 52 && sidebarWidth < 600) {
       this.element.style.width = sidebarWidth + 'px';
     }
   }
